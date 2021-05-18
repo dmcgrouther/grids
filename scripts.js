@@ -1,7 +1,13 @@
-const addBoxButton = document.getElementById("addBox");
+const addBoxButton = document.getElementById("addBoxButton");
+const createGridButton = document.getElementById("createGrid");
 
-const addSquares = () => {
-  console.log('hello there!');
+const addBox = () => {
+  console.log('add box pressed');
 }
 
-addBoxButton.addEventListener("click", addSquares);
+const createGrid = () => {
+  console.log('create grid pressed!');
+}
+
+addBoxButton.addEventListener("click", addBox);
+createGridButton.addEventListener("click", createGrid);
