@@ -31,15 +31,6 @@ const removeBox = () => {
   event.target.parentElement.remove();
 }
 
-// const createGrid = () => {
-//   console.log('create grid pressed!');
-//   for(let i = 1; i <= rowCount; i++){
-//     for(let j = 1; j <= columnCount; j++){
-//       console.log(`row is ${i} column is ${j}`)
-//     }
-//   }
-// }
-
 function createGrid() {
   container.style.setProperty('--grid-rows', rowCount);
   container.style.setProperty('--grid-cols', columnCount);
@@ -48,20 +39,13 @@ function createGrid() {
     cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
 
-    // let buttonTemplate = document.createElement("<button></button>");
-    // var x = document.createTextNode("x");
-    // buttonTemplate.appendChild(x);
-    // cell.appendChild(buttonTemplate);
-
 
     let btn = document.createElement("button");
     btn.innerHTML = "x";
     btn.type = "remove";
-    // btn.name = "formBtn";
     btn.name = "remove";
     btn.className+="remove";
     cell.id=c+1
-    // document.body.appendChild(btn);
     cell.appendChild(btn);
     btn.addEventListener("click", removeBox)
 
