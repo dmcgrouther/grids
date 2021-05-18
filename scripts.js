@@ -4,8 +4,22 @@ const columnSelectButton = document.getElementById("column-select");
 const rowSelectButton = document.getElementById("row-select");
 
 
-let columnCount = 0;
-let rowCount = 0;
+let columnCount = 1;
+let rowCount = 1;
+
+function selectColumns(){
+  var eID = document.getElementById("columns");
+
+  columnCount = eID.value;
+  console.log(`columnCount is ${columnCount}`);
+}
+
+function selectRows(){
+  var eID = document.getElementById("rows");
+
+  rowCount = eID.value;
+  console.log(`rowCount is ${rowCount}`);
+}
 
 const addBox = () => {
   console.log('add box pressed');
@@ -13,20 +27,11 @@ const addBox = () => {
 
 const createGrid = () => {
   console.log('create grid pressed!');
-}
-
-function selectColumns(event){
-  var eID = document.getElementById("columns");
-
-  var columnCount = eID.value;
-  console.log(`columnCount is ${columnCount}`);
-}
-
-function selectRows(event){
-  var eID = document.getElementById("rows");
-
-  var rowCount = eID.value;
-  console.log(`rowCount is ${rowCount}`);
+  for(let i = 1; i <= rowCount; i++){
+    for(let j = 1; j <= columnCount; j++){
+      console.log(`row is ${i} column is ${j}`)
+    }
+  }
 }
 
 addBoxButton.addEventListener("click", addBox);
