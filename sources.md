@@ -7,3 +7,10 @@ utlized this for dropdown list
 
 
 https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
+
+
+
+https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript
+
+
+https://sebhastian.com/javascript-create-button/
