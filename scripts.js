@@ -13,20 +13,20 @@ const selectColumns = () => {
   var eID = document.getElementById("columns");
 
   columnCount = eID.value;
-  console.log(`columnCount is ${columnCount}`);
+  // console.log(`columnCount is ${columnCount}`);
 }
 
 const selectRows = () => {
   var eID = document.getElementById("rows");
 
   rowCount = eID.value;
-  console.log(`rowCount is ${rowCount}`);
+  // console.log(`rowCount is ${rowCount}`);
 }
 
 const addBox = () => {
-  console.log('add box pressed');
+  // console.log('add box pressed');
   containerLength++
-  console.log(`containerLength is ${containerLength}`)
+  // console.log(`containerLength is ${containerLength}`)
 
   let cell = document.createElement("div");
   cell.innerText = (containerLength);
@@ -45,14 +45,14 @@ const addBox = () => {
 
 const removeBox = (event) => {
   containerLength--;
-  console.log('remove box button pressed');
+  // console.log('remove box button pressed');
   event.target.parentElement.remove();
   event.preventDefault();
 
   let containerChildren = container.children
 
   for(let z = 0; z < containerChildren.length; z++){
-    console.log(z)
+    // console.log(z)
     containerChildren[z].innerHTML=z+1
     let btn = document.createElement("button");
     btn.innerHTML = "x";
