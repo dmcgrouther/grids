@@ -25,9 +25,26 @@ function selectRows(){
 
 const addBox = () => {
   console.log('add box pressed');
+  containerLength++
+  console.log(`containerLength is ${containerLength}`)
+
+  let cell = document.createElement("div");
+  cell.innerText = (containerLength);
+  container.appendChild(cell).className = "grid-item";
+
+
+  let btn = document.createElement("button");
+  btn.innerHTML = "x";
+  btn.type = "remove";
+  btn.name = "remove";
+  btn.className+="remove";
+  cell.id=containerLength;
+  cell.appendChild(btn);
+  btn.addEventListener("click", removeBox);
 }
 
 const removeBox = (event) => {
+  containerLength--;
   console.log('remove box button pressed');
   event.target.parentElement.remove();
   event.preventDefault();
