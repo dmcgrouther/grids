@@ -7,16 +7,16 @@ const boxRemoveButton = document.getElementsByClassName("remove");
 
 let columnCount = 1;
 let rowCount = 1;
-let containerLength = 1;
+let containerLength = 0;
 
-function selectColumns(){
+const selectColumns = () => {
   var eID = document.getElementById("columns");
 
   columnCount = eID.value;
   console.log(`columnCount is ${columnCount}`);
 }
 
-function selectRows(){
+const selectRows = () => {
   var eID = document.getElementById("rows");
 
   rowCount = eID.value;
@@ -65,7 +65,11 @@ const removeBox = (event) => {
   }
 }
 
-function createGrid() {
+const createGrid = () => {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
   container.style.setProperty('--grid-rows', rowCount);
   container.style.setProperty('--grid-cols', columnCount);
   containerLength = rowCount * columnCount;
