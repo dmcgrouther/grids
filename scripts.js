@@ -31,14 +31,9 @@ const removeBox = (event) => {
   console.log('remove box button pressed');
   event.target.parentElement.remove();
   event.preventDefault();
-  // containerLength--;
-  // console.log(containerLength)
-  // let z = 1;
 
   let containerChildren = container.children
-  // while(z <= containerChildren.length){
-  //   console.log()
-  // }
+
   for(let z = 0; z < containerChildren.length; z++){
     console.log(z)
     containerChildren[z].innerHTML=z+1
@@ -79,4 +74,3 @@ addBoxButton.addEventListener("click", addBox);
 createGridButton.addEventListener("click", createGrid);
 columnSelectButton.addEventListener("click", selectColumns);
 rowSelectButton.addEventListener("click", selectRows);
-// boxRemoveButton.addEventListener("click", removeBox)
